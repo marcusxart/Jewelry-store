@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-gold: #C5A059;
+  --color-charcoal: #1A1A1A;
+  --color-ivory: #FDFCFB;
+  --color-soft-ivory: #F5F2EE;
+  --color-stone-muted: #E8E4DF;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.bento-card {
+  @apply bg-white border border-gold/20 rounded-xl overflow-hidden transition-all duration-300;
+}
+
+.bento-card-muted {
+  @apply bg-soft-ivory border border-gold/20 rounded-xl overflow-hidden transition-all duration-300;
+}
+
+.luxury-gradient-gold {
+  background: linear-gradient(135deg, #C5A059 0%, #A88644 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nav-link {
+  @apply text-[10px] uppercase tracking-[0.2em] font-semibold opacity-60 transition-all hover:opacity-100 hover:text-gold;
+}
